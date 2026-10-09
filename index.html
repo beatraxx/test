@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EstateOS — One Connected Ecosystem for Builders, Developers, Brokers & Buyers</title>
+  <meta name="description" content="EstateOS is the unified operating platform connecting construction timelines, role-based authority, lead pipelines, 3D property tours, and shielded customer communication into a single ecosystem.">
+  <meta name="keywords" content="EstateOS, real estate OS, developer command center, brokerage management, role based authority, real estate software">
+  
+  <!-- Modern Typography: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="estateos-app">
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- Ambient Cursor Glow Effect -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-content">
+      <span class="announcement-pill">NEW</span>
+      <span class="announcement-text">EstateOS Whitepaper v1.1 is now live — Discover how we solve real estate fragmentation.</span>
+      <a href="#whitepaper" class="announcement-link">Read Whitepaper &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="header" id="mainHeader">
+    <div class="header-container">
+      <a href="#" class="brand-logo" aria-label="EstateOS Home">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </div>
+        <span class="brand-name">Estate<span>OS</span></span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#ecosystem" class="nav-link">Ecosystem</a>
+        <a href="#roles" class="nav-link">Roles</a>
+        <a href="#workflow" class="nav-link">Workflow</a>
+        <a href="#authority" class="nav-link">Authority Matrix</a>
+        <a href="#mobile-app" class="nav-link">Mobile App</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#whitepaper" class="nav-link">Whitepaper</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="openPortalBtn" aria-label="Open Client Portal">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Client Portal
+        </button>
+        <button class="btn btn-primary" id="openDemoBtn" aria-label="Book Demo">
+          Book Demo
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main>
+    <!-- HERO SECTION (Warm Alabaster #F9F6F0) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-accent"></div>
+      <div class="container hero-container">
+        
+        <div class="hero-header-block reveal-on-scroll">
+          <div class="pill-badge hero-pill">
+            <span class="pulse-dot"></span>
+            <span>ONE CONNECTED REAL ESTATE WORKSPACE</span>
+          </div>
+
+          <h1 class="hero-title">
+            One connected ecosystem for <span class="text-serif-italic">builders</span>, developers, brokerage owners, <span class="highlight-bronze">brokers</span> and buyers.
+          </h1>
+
+          <p class="hero-subtitle">
+            Connect construction, contracts, materials, permissions, sales pipeline, property listings, and customer communication. Centralized controls with role-based authority for complete visibility and seamless execution.
+          </p>
+
+          <div class="hero-cta-group">
+            <button class="btn btn-primary btn-lg" id="heroBookDemoBtn">
+              Book Demo
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <a href="#ecosystem" class="btn btn-secondary btn-lg">
+              Explore Platform
+            </a>
+          </div>
+
+          <!-- Audience Filter Pills (From Image 1) -->
+          <div class="hero-role-pills" id="heroRolePills">
+            <button class="role-pill active" data-role="developer">
+              <span class="role-pill-indicator"></span>
+              Builders & Developers
+            </button>
+            <button class="role-pill" data-role="broker">
+              <span class="role-pill-indicator"></span>
+              Real estate Brokerages
+            </button>
+            <button class="role-pill" data-role="buyer">
+              <span class="role-pill-indicator"></span>
+              Home Buyers & Investors
+            </button>
+          </div>
+        </div>
+
+        <!-- HERO INTERACTIVE WORKSPACE MOCKUP (From Image 1 Hero Preview) -->
+        <div class="hero-mockup-wrapper reveal-on-scroll" id="heroMockup">
+          <div class="mockup-window card-tilt">
+            <!-- Window Topbar -->
+            <div class="mockup-topbar">
+              <div class="mockup-window-controls">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="mockup-titlebar">
+                <span class="mockup-project-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  EstateOS Command Center
+                </span>
+                <span class="mockup-separator">/</span>
+                <span class="mockup-active-view" id="mockupActiveViewTitle">Developer Workspace</span>
+                <span class="live-pill"><span class="live-blink"></span>LIVE SYNC</span>
+              </div>
+              <div class="mockup-right-actions">
+                <span class="mockup-user-chip">
+                  <span class="avatar">DA</span>
+                  <span id="mockupUserRole">Developer Admin</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Workspace Body with Dynamic Interactive Tabs -->
+            <div class="mockup-body">
+              <!-- Workspace Sidebar Navigation -->
+              <aside class="mockup-sidebar">
+                <div class="mockup-sidebar-section">
+                  <span class="sidebar-heading">WORKSPACES</span>
+                  <button class="mockup-nav-btn active" data-mockup-tab="overview">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                    Master Overview
+                  </button>
+                  <button class="mockup-nav-btn" data-mockup-tab="construction">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M6 20V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path></svg>
+                    Construction & Materials
+                  </button>
+                  <button class="mockup-nav-btn" data-mockup-tab="sales">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+                    Brokerage Leads
+                  </button>
+                  <button class="mockup-nav-btn" data-mockup-tab="authority">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    Authority Matrix
+                  </button>
+                </div>
+
+                <div class="mockup-sidebar-project-card">
+                  <div class="card-head">
+                    <span class="project-indicator"></span>
+                    <span class="project-name">The Courtyard Villa</span>
+                  </div>
+                  <div class="project-stat-row">
+                    <span>Phase 3 Superstructure</span>
+                    <span class="bold">78% Done</span>
+                  </div>
+                  <div class="progress-bar-thin">
+                    <div class="progress-fill" style="width: 78%;"></div>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Mockup Dynamic Main Content Area -->
+              <div class="mockup-content-area" id="mockupDynamicArea">
+                <!-- Top Key Performance Metrics -->
+                <div class="mockup-kpi-grid">
+                  <div class="kpi-card">
+                    <span class="kpi-label">Active Units Under Construction</span>
+                    <div class="kpi-val-row">
+                      <span class="kpi-value" data-target="184">184</span>
+                      <span class="kpi-badge positive">+12 on track</span>
+                    </div>
+                  </div>
+                  <div class="kpi-card">
+                    <span class="kpi-label">Verified Lead Pipeline</span>
+                    <div class="kpi-val-row">
+                      <span class="kpi-value" data-target="1420">1,420</span>
+                      <span class="kpi-badge positive">34 Site Visits</span>
+                    </div>
+                  </div>
+                  <div class="kpi-card">
+                    <span class="kpi-label">Pending Authority Approvals</span>
+                    <div class="kpi-val-row">
+                      <span class="kpi-value" data-target="3">3</span>
+                      <span class="kpi-badge warning">Action Required</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Split Workspace View: Active Project & Live Action Feed -->
+                <div class="mockup-split-row">
+                  <!-- Active Unit Showcase -->
+                  <div class="mockup-panel">
+                    <div class="panel-header">
+                      <div>
+                        <h4 class="panel-title">Featured Property • Unit 402</h4>
+                        <span class="panel-subtitle">Luxury Courtyard Villa — Bengaluru North</span>
+                      </div>
+                      <span class="status-tag verified">Authorized by Builder</span>
+                    </div>
+                    
+                    <div class="mockup-property-preview">
+                      <div class="property-img-box">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80" alt="The Courtyard Villa" class="property-thumb" loading="lazy">
+                        <span class="img-badge">3D Model Available</span>
+                      </div>
+                      <div class="property-info-box">
+                        <div class="prop-price-row">
+                          <span class="prop-price">₹2.85 Crore</span>
+                          <span class="prop-unit-type">4 BHK • 4,200 sq.ft</span>
+                        </div>
+                        <div class="prop-specs-tags">
+                          <span>Private Pool</span>
+                          <span>Solar Microgrid</span>
+                          <span>Italian Marble</span>
+                        </div>
+                        <div class="prop-lead-status">
+                          <div class="lead-avatar-group">
+                            <span class="mini-avatar">JD</span>
+                            <span class="mini-avatar">AK</span>
+                            <span class="mini-avatar-count">+4</span>
+                          </div>
+                          <span class="lead-text">6 Shielded Buyer Inquiries this week</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Live Stream Feed (Authority & Audit Stream) -->
+                  <div class="mockup-panel">
+                    <div class="panel-header">
+                      <h4 class="panel-title">Live Unified Audit Stream</h4>
+                      <span class="stream-dot-pulse"></span>
+                    </div>
+
+                    <div class="mockup-timeline">
+                      <div class="timeline-item">
+                        <div class="timeline-dot success"></div>
+                        <div class="timeline-body">
+                          <div class="timeline-meta">
+                            <span class="timeline-actor">Site Supervisor (Rajiv M.)</span>
+                            <span class="timeline-time">4m ago</span>
+                          </div>
+                          <p class="timeline-desc">Uploaded cured concrete lab report for Block B Foundation. Verified 100% compliant.</p>
+                        </div>
+                      </div>
+
+                      <div class="timeline-item">
+                        <div class="timeline-dot bronze"></div>
+                        <div class="timeline-body">
+                          <div class="timeline-meta">
+                            <span class="timeline-actor">Apex Realty (Broker Partner)</span>
+                            <span class="timeline-time">18m ago</span>
+                          </div>
+                          <p class="timeline-desc">Booked VIP Site Visit for Saturday 3:30 PM with Buyer #B-883. Contact shielded.</p>
+                        </div>
+                      </div>
+
+                      <div class="timeline-item">
+                        <div class="timeline-dot alert"></div>
+                        <div class="timeline-body">
+                          <div class="timeline-meta">
+                            <span class="timeline-actor">Procurement Dept</span>
+                            <span class="timeline-time">42m ago</span>
+                          </div>
+                          <p class="timeline-desc">Material PO #892 (TMT 550D Steel) awaiting Developer Admin digital signature.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- Mockup Footer Caption -->
+            <div class="mockup-caption-bar">
+              <span>Single unified interface for all 5 stakeholders • Role-based view active</span>
+              <button class="caption-link" id="mockupSwitchViewBtn">Switch to Broker View &rarr;</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: ROLES IN THE ECOSYSTEM (Warm Alabaster #F9F6F0 - Image 1 Section 2) -->
+    <section class="section roles-section" id="roles">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            ROLES &amp; TEAMS
+          </div>
+          <h2 class="section-title">Built for every role in the real estate ecosystem.</h2>
+          <p class="section-subtitle">
+            Dedicated modules for granular permissions and multi-channel operations across all property lifecycles.
+          </p>
+        </div>
+
+        <div class="roles-grid">
+          <!-- Role Card 1: Builders & Developers -->
+          <div class="role-card card-tilt reveal-on-scroll" data-delay="100">
+            <div class="role-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+                <line x1="9" y1="22" x2="9" y2="22.01"></line>
+                <line x1="15" y1="22" x2="15" y2="22.01"></line>
+                <line x1="9" y1="18" x2="9" y2="18.01"></line>
+                <line x1="15" y1="18" x2="15" y2="18.01"></line>
+                <line x1="9" y1="14" x2="9" y2="14.01"></line>
+                <line x1="15" y1="14" x2="15" y2="14.01"></line>
+                <line x1="9" y1="10" x2="9" y2="10.01"></line>
+                <line x1="15" y1="10" x2="15" y2="10.01"></line>
+                <line x1="9" y1="6" x2="9" y2="6.01"></line>
+                <line x1="15" y1="6" x2="15" y2="6.01"></line>
+              </svg>
+            </div>
+            <h3 class="role-card-title">Centralised command center for builders and developers</h3>
+            <p class="role-card-text">
+              Builders can manage projects, employees, engineers, designers, contractors, materials, property listings, sales, marketing, and broker relationships from a centralized platform with master audit control.
+            </p>
+            <div class="role-card-tags">
+              <span class="role-tag">Project Tracking</span>
+              <span class="role-tag">Material Approvals</span>
+              <span class="role-tag">Contractor Oversight</span>
+            </div>
+            <button class="role-card-btn" onclick="openRoleModal('developer')">Learn more &rarr;</button>
+          </div>
+
+          <!-- Role Card 2: Brokerage Operations -->
+          <div class="role-card card-tilt reveal-on-scroll" data-delay="200">
+            <div class="role-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="18" cy="5" r="3"></circle>
+                <circle cx="6" cy="12" r="3"></circle>
+                <circle cx="18" cy="19" r="3"></circle>
+                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+              </svg>
+            </div>
+            <h3 class="role-card-title">Brokerage operations in one integrated environment</h3>
+            <p class="role-card-text">
+              Brokerage owners can manage their teams, distribute leads fairly, monitor broker conversion rates, and allow agents to access verified properties, showcase rich 3D models, and schedule site visits.
+            </p>
+            <div class="role-card-tags">
+              <span class="role-tag">Lead Distribution</span>
+              <span class="role-tag">3D Property Tours</span>
+              <span class="role-tag">Performance BI</span>
+            </div>
+            <button class="role-card-btn" onclick="openRoleModal('broker')">Learn more &rarr;</button>
+          </div>
+
+          <!-- Role Card 3: Shielded Customer Experience -->
+          <div class="role-card card-tilt reveal-on-scroll" data-delay="300">
+            <div class="role-card-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="role-card-title">Customer experience with reduced contact exposure</h3>
+            <p class="role-card-text">
+              Instead of receiving spam calls from multiple brokers, customers interact securely through platform chat and masked calls. AI assistant answers instant questions before connecting with verified professionals.
+            </p>
+            <div class="role-card-tags">
+              <span class="role-tag">Contact Shielding</span>
+              <span class="role-tag">AI Concierge</span>
+              <span class="role-tag">Instant Verification</span>
+            </div>
+            <button class="role-card-btn" onclick="openRoleModal('buyer')">Learn more &rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: DARK SLATE NAVY SECTION (Background #0F1D24 - Image 1 Section 3) -->
+    <section class="section dark-section workflow-section" id="workflow">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge dark-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            ONE CONNECTED FLOW FROM ENQUIRY TO BOOKING
+          </div>
+          <h2 class="section-title text-light">One connected flow from enquiry to booking.</h2>
+          <p class="section-subtitle text-light-muted">
+            The EstateOS unified workflow unites your construction timelines, sales pipeline, and customer interactions into a single frictionless stream.
+          </p>
+        </div>
+
+        <!-- 4 Step Flow Grid (From Image 1) -->
+        <div class="workflow-steps-grid">
+          <!-- Step 1: Enquiry -->
+          <div class="step-card reveal-on-scroll" data-step="1">
+            <div class="step-header">
+              <div class="step-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <span class="step-number">01</span>
+            </div>
+            <h4 class="step-title">Enquiry</h4>
+            <p class="step-desc">
+              Omnichannel leads captured across portals, direct campaigns, and walk-ins. Deduplicated and attributed automatically without personal number leakage.
+            </p>
+            <div class="step-footer-pill">Automatic Attribution</div>
+          </div>
+
+          <!-- Step 2: Match -->
+          <div class="step-card reveal-on-scroll" data-step="2">
+            <div class="step-header">
+              <div class="step-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <span class="step-number">02</span>
+            </div>
+            <h4 class="step-title">Match</h4>
+            <p class="step-desc">
+              AI algorithms match buyer preference vectors to live builder inventory authorized for sale. Brokers receive real-time availability and discount permissions.
+            </p>
+            <div class="step-footer-pill">AI Inventory Match</div>
+          </div>
+
+          <!-- Step 3: Experience -->
+          <div class="step-card reveal-on-scroll" data-step="3">
+            <div class="step-header">
+              <div class="step-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <span class="step-number">03</span>
+            </div>
+            <h4 class="step-title">Experience</h4>
+            <p class="step-desc">
+              Showcase high-resolution media, interactive 3D virtual walkthroughs, and validated floor plans. Coordinate site visits with calendar synchronization.
+            </p>
+            <div class="step-footer-pill">3D Digital Walkthrough</div>
+          </div>
+
+          <!-- Step 4: Booking -->
+          <div class="step-card reveal-on-scroll" data-step="4">
+            <div class="step-header">
+              <div class="step-icon-wrap">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <span class="step-number">04</span>
+            </div>
+            <h4 class="step-title">Booking</h4>
+            <p class="step-desc">
+              Digital unit locking, KYC verification, milestone-based payment schedule generation, and legal agreement generation with tamper-proof audit trails.
+            </p>
+            <div class="step-footer-pill">Instant Unit Lock</div>
+          </div>
+        </div>
+
+        <!-- Interactive Workflow Simulator -->
+        <div class="workflow-simulator-box reveal-on-scroll">
+          <div class="simulator-header">
+            <span class="simulator-label">INTERACTIVE PIPELINE RUNTIME</span>
+            <span class="simulator-state" id="simStateText">Step 1: Enquiry Ingestion</span>
+          </div>
+          <div class="simulator-timeline-track">
+            <div class="sim-node active" onclick="activateSimStep(1)">1. Lead Captured</div>
+            <div class="sim-node" onclick="activateSimStep(2)">2. Unit Matching</div>
+            <div class="sim-node" onclick="activateSimStep(3)">3. 3D Tour &amp; Visit</div>
+            <div class="sim-node" onclick="activateSimStep(4)">4. Agreement Locked</div>
+          </div>
+          <div class="simulator-preview" id="simPreviewBox">
+            <div class="sim-detail-col">
+              <span class="sim-detail-badge">LIVE EVENT DISPATCH</span>
+              <h4 id="simDetailTitle">Omnichannel Enquiry Ingestion</h4>
+              <p id="simDetailDesc">Buyer arrives via portal campaign. EstateOS generates a shielded alias `#BUYER-9821`, deduplicates against existing broker records, and assigns to verified agent Amit K. without revealing personal mobile phone.</p>
+            </div>
+            <div class="sim-action-col">
+              <div class="sim-metric-pill">
+                <span class="label">Time to First Response</span>
+                <span class="val">42 seconds</span>
+              </div>
+              <div class="sim-metric-pill">
+                <span class="label">Privacy Compliance</span>
+                <span class="val success">100% Shielded</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: AUTHORITY MATRIX (Image 1 Section 4) -->
+    <section class="section authority-section" id="authority">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            AUTHORITY &amp; GOVERNANCE
+          </div>
+          <h2 class="section-title">Clear boundaries of responsibility and authority.</h2>
+          <p class="section-subtitle">
+            Tailor-defined role powers eliminate finger-pointing. Distribute operations across contractors, brokers, and consultants while maintaining ironclad master approval.
+          </p>
+        </div>
+
+        <!-- 4 Authority Boundary Cards (From Image 1) -->
+        <div class="authority-grid">
+          <div class="authority-card card-tilt reveal-on-scroll">
+            <div class="authority-card-header">
+              <div class="auth-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h4>Project &amp; Site Management</h4>
+            </div>
+            <p>Engineers, architects and site supervisors update construction milestones, log daily material usage and submit progress logs, with zero access to client financials.</p>
+            <div class="auth-role-tag">Scope: Site Supervisors, Civil Engineers</div>
+          </div>
+
+          <div class="authority-card card-tilt reveal-on-scroll">
+            <div class="authority-card-header">
+              <div class="auth-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <h4>Sales &amp; Inventory Control</h4>
+            </div>
+            <p>Sales heads release specific unit inventories for booking, set floor pricing bands, and authorize payment milestone adjustments within developer-approved policies.</p>
+            <div class="auth-role-tag">Scope: Sales Directors, Revenue Ops</div>
+          </div>
+
+          <div class="authority-card card-tilt reveal-on-scroll">
+            <div class="authority-card-header">
+              <div class="auth-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              </div>
+              <h4>Brokerage &amp; Lead Access</h4>
+            </div>
+            <p>Brokers access verified property collateral, communicate with assigned leads via platform relay, and request site inspections without customer data harvesting.</p>
+            <div class="auth-role-tag">Scope: Registered Brokers &amp; Agencies</div>
+          </div>
+
+          <div class="authority-card card-tilt reveal-on-scroll">
+            <div class="authority-card-header">
+              <div class="auth-icon-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <h4>Auditing &amp; BI Reporting</h4>
+            </div>
+            <p>Leadership and investors retain real-time transparency across material consumption, budget variances, sales velocity, and historical audit logs.</p>
+            <div class="auth-role-tag">Scope: Builders, C-Suite, Auditors</div>
+          </div>
+        </div>
+
+        <!-- Interactive Live Authority Matrix Simulator -->
+        <div class="matrix-interactive-wrapper reveal-on-scroll">
+          <div class="matrix-toolbar">
+            <div class="matrix-toolbar-title">
+              <h4>Interactive Role Permission Simulator</h4>
+              <p>Select a persona below to see how EstateOS enforces strict role boundaries across the platform.</p>
+            </div>
+            <div class="matrix-role-selector" id="matrixRoleButtons">
+              <button class="matrix-btn active" data-matrix-role="developer">Developer Admin</button>
+              <button class="matrix-btn" data-matrix-role="engineer">Site Engineer</button>
+              <button class="matrix-btn" data-matrix-role="broker">Channel Broker</button>
+              <button class="matrix-btn" data-matrix-role="buyer">Customer / Buyer</button>
+            </div>
+          </div>
+
+          <div class="matrix-table-card">
+            <table class="matrix-table" id="matrixPermissionTable">
+              <thead>
+                <tr>
+                  <th>Platform Operation</th>
+                  <th>Permission Level</th>
+                  <th>Audit Logging</th>
+                  <th>Boundary Rule</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Populated dynamically via JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: MOBILE APP EXPERIENCE (Showcasing Image 4 & Design Library Image 3) -->
+    <section class="section mobile-app-section" id="mobile-app">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            ESTATEOS ON MOBILE
+          </div>
+          <h2 class="section-title">The entire ecosystem in the palm of your hand.</h2>
+          <p class="section-subtitle">
+            Designed with warm ergonomics, biometric verification, and role-adaptive interfaces for builders on-site, brokers in the field, and buyers at home.
+          </p>
+        </div>
+
+        <div class="mobile-showcase-wrapper">
+          <!-- Mobile Screen Navigation Tabs -->
+          <div class="mobile-tabs-bar" id="mobileScreenTabs">
+            <button class="mob-tab-btn active" data-screen="discovery">
+              <span>01</span> Property Discovery
+            </button>
+            <button class="mob-tab-btn" data-screen="role">
+              <span>02</span> Role Onboarding
+            </button>
+            <button class="mob-tab-btn" data-screen="details">
+              <span>03</span> Villa Specs &amp; 3D
+            </button>
+            <button class="mob-tab-btn" data-screen="shield">
+              <span>04</span> Shielded Communication
+            </button>
+          </div>
+
+          <!-- Realistic Phone Device Mockup -->
+          <div class="phone-frame-container reveal-on-scroll">
+            <div class="phone-mockup">
+              <!-- Phone Hardware Details -->
+              <div class="phone-notch">
+                <span class="speaker"></span>
+                <span class="camera"></span>
+              </div>
+              <div class="phone-status-bar">
+                <span class="time">9:41</span>
+                <span class="icons">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L12 22l7.03-4.39C20.26 16.07 21 14.12 21 12c0-4.97-4.03-9-9-9z"/></svg>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg>
+                </span>
+              </div>
+
+              <!-- Screen Content Body -->
+              <div class="phone-screen" id="phoneScreenBody">
+                
+                <!-- SCREEN 1: DISCOVERY FEED (Image 3 & 4 Property Card) -->
+                <div class="phone-view active" id="view-discovery">
+                  <div class="app-header">
+                    <div class="app-brand-row">
+                      <span class="app-logo-mini">estate <b>os</b></span>
+                      <div class="app-header-icons">
+                        <span class="icon-circle">🔍</span>
+                        <span class="icon-circle">🔔</span>
+                      </div>
+                    </div>
+                    <div class="app-greeting">
+                      <h3>Find your <span class="highlight">dream home</span>.</h3>
+                      <p>Curated verified builder residences</p>
+                    </div>
+                    <div class="app-search-box">
+                      <span>📍 Bengaluru, Whitefield</span>
+                      <span class="filter-btn">Filters</span>
+                    </div>
+                  </div>
+
+                  <!-- Property Card (Exact Replica of Design System Image 3) -->
+                  <div class="app-property-card">
+                    <div class="app-card-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="The Courtyard Villa" class="app-card-img">
+                      <span class="app-badge-exclusive">EXCLUSIVE LISTING</span>
+                      <button class="app-fav-btn">❤️</button>
+                    </div>
+                    <div class="app-card-details">
+                      <h4 class="app-card-title">The Courtyard Villa</h4>
+                      <p class="app-card-location">Whitefield, Bengaluru</p>
+                      <div class="app-card-price-row">
+                        <span class="app-card-price">₹2.85 crore</span>
+                        <span class="app-card-meta">4 BHK • 4,200 sq.ft</span>
+                      </div>
+                      <div class="app-amenities-row">
+                        <span>🏊 Private Pool</span>
+                        <span>🌳 Courtyard</span>
+                        <span>⚡ EV Charger</span>
+                      </div>
+                      <button class="app-card-action-btn" onclick="switchMobileScreen('details')">View Details &rarr;</button>
+                    </div>
+                  </div>
+
+                  <!-- Second Card in feed -->
+                  <div class="app-property-card secondary">
+                    <div class="app-card-img-wrap">
+                      <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=600&q=80" alt="Penthouse Skylight" class="app-card-img">
+                      <span class="app-badge-exclusive">NEW LAUNCH</span>
+                    </div>
+                    <div class="app-card-details">
+                      <h4 class="app-card-title">The Glass Pavilion</h4>
+                      <span class="app-card-price">₹3.40 crore</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN 2: ROLE ONBOARDING (From Image 3 & 4) -->
+                <div class="phone-view" id="view-role">
+                  <div class="app-onboarding-screen">
+                    <span class="back-link" onclick="switchMobileScreen('discovery')">&larr; Back</span>
+                    <div class="onboard-header">
+                      <h3>How will you use Estate OS?</h3>
+                      <p>Select your primary workspace role to personalize your tools and permissions.</p>
+                    </div>
+
+                    <div class="role-selection-options">
+                      <!-- Option 1: Developer -->
+                      <div class="role-opt-card active">
+                        <div class="role-opt-icon">🏗️</div>
+                        <div class="role-opt-info">
+                          <h4>Developer</h4>
+                          <p>Oversee project sites, materials, listings and approvals.</p>
+                        </div>
+                        <span class="role-opt-radio selected">✓</span>
+                      </div>
+
+                      <!-- Option 2: Broker -->
+                      <div class="role-opt-card">
+                        <div class="role-opt-icon">🤝</div>
+                        <div class="role-opt-info">
+                          <h4>Broker / Agency</h4>
+                          <p>Access authorized listings, manage leads &amp; tours.</p>
+                        </div>
+                        <span class="role-opt-radio"></span>
+                      </div>
+
+                      <!-- Option 3: Buyer -->
+                      <div class="role-opt-card">
+                        <div class="role-opt-icon">🏡</div>
+                        <div class="role-opt-info">
+                          <h4>Buyer / Investor</h4>
+                          <p>Explore properties, chat with verified agents privately.</p>
+                        </div>
+                        <span class="role-opt-radio"></span>
+                      </div>
+                    </div>
+
+                    <button class="app-btn-primary" onclick="switchMobileScreen('details')">Continue Setup &rarr;</button>
+                  </div>
+                </div>
+
+                <!-- SCREEN 3: VILLA DETAILS & 3D (From Image 4) -->
+                <div class="phone-view" id="view-details">
+                  <div class="app-detail-screen">
+                    <div class="detail-hero-media">
+                      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Villa Detail" class="detail-hero-img">
+                      <button class="detail-back-floating" onclick="switchMobileScreen('discovery')">&larr;</button>
+                      <button class="detail-3d-button">🕶️ 3D Virtual Walkthrough</button>
+                    </div>
+                    <div class="detail-body-content">
+                      <div class="detail-title-row">
+                        <div>
+                          <h3>The Courtyard Villa</h3>
+                          <p>Whitefield East, Bengaluru</p>
+                        </div>
+                        <span class="detail-price-tag">₹2.85 Cr</span>
+                      </div>
+                      <div class="detail-specs-grid">
+                        <div class="spec-cell"><span>Bedrooms</span><b>4 BHK</b></div>
+                        <div class="spec-cell"><span>Carpet Area</span><b>4,200 sq.ft</b></div>
+                        <div class="spec-cell"><span>Possession</span><b>Q4 2026</b></div>
+                      </div>
+                      <div class="detail-audit-box">
+                        <span class="shield-icon">🛡️</span>
+                        <div>
+                          <b>EstateOS Verified Listing</b>
+                          <p>RERA Approved • Clear Title Deed • Soil Test Passed</p>
+                        </div>
+                      </div>
+                      <button class="app-btn-primary" onclick="switchMobileScreen('shield')">Connect with Verified Broker</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- SCREEN 4: SHIELDED COMMUNICATION (From Whitepaper & Image 4) -->
+                <div class="phone-view" id="view-shield">
+                  <div class="app-chat-screen">
+                    <div class="chat-header">
+                      <span class="chat-back" onclick="switchMobileScreen('details')">&larr;</span>
+                      <div class="chat-rep-info">
+                        <h4>EstateOS Relay • Broker Amit K.</h4>
+                        <span class="shield-badge">🔒 Phone Masked (Zero Spam)</span>
+                      </div>
+                    </div>
+                    <div class="chat-messages-body">
+                      <div class="chat-bubble broker">
+                        Hello! I am Amit, authorized representative for The Courtyard Villa. Would you like to schedule an in-person site walk this Saturday?
+                        <span class="time">10:14 AM</span>
+                      </div>
+                      <div class="chat-bubble buyer">
+                        Hi Amit! Yes, Saturday 4:00 PM works best. Is the master pool suite ready to view?
+                        <span class="time">10:15 AM</span>
+                      </div>
+                      <div class="chat-bubble broker">
+                        Yes, the superstructure and sample finishing are 100% accessible. I have reserved your private slot.
+                        <span class="time">10:16 AM</span>
+                      </div>
+                      <div class="chat-system-card">
+                        <span>📅 Site Visit Scheduled: Sat, Oct 11 • 4:00 PM</span>
+                        <small>Directions &amp; Gate Pass sent to your app</small>
+                      </div>
+                    </div>
+                    <div class="chat-input-bar">
+                      <input type="text" placeholder="Type a secure message..." readonly value="Confirming Saturday 4 PM!">
+                      <button class="send-btn">&rarr;</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Phone Bottom Nav Bar (From Design System Image 3) -->
+              <div class="phone-bottom-nav">
+                <div class="bottom-nav-item active" onclick="switchMobileScreen('discovery')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  <span>Home</span>
+                </div>
+                <div class="bottom-nav-item" onclick="switchMobileScreen('details')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <span>Explore</span>
+                </div>
+                <div class="bottom-nav-item" onclick="switchMobileScreen('shield')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  <span>Chat</span>
+                </div>
+                <div class="bottom-nav-item" onclick="switchMobileScreen('role')">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <span>Profile</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6: AI PROPERTY CONCIERGE SIMULATOR (From Whitepaper) -->
+    <section class="section ai-concierge-section" id="ai-assistant">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            INTELLIGENT AUTOMATION
+          </div>
+          <h2 class="section-title">AI-powered assistant built for the entire ecosystem.</h2>
+          <p class="section-subtitle">
+            From answering buyer floorplan questions instantly to summarizing engineering material logs for builders.
+          </p>
+        </div>
+
+        <div class="ai-demo-card card-tilt reveal-on-scroll">
+          <div class="ai-demo-header">
+            <div class="ai-avatar-box">
+              <span class="ai-sparkle">✦</span>
+              <div>
+                <h4>EstateOS AI Concierge</h4>
+                <span class="ai-status">Online • Connected to verified project database</span>
+              </div>
+            </div>
+            <div class="ai-preset-chips">
+              <span class="chip-label">Try Asking:</span>
+              <button class="ai-chip" onclick="simulateAiQuery('Show me villas with swimming pools in Bengaluru under ₹3 Cr')">"Villas with pool &lt; ₹3 Cr"</button>
+              <button class="ai-chip" onclick="simulateAiQuery('What is the current construction progress of Block B?')">"Block B Construction Progress"</button>
+              <button class="ai-chip" onclick="simulateAiQuery('How does contact shielding protect my personal mobile number?')">"How does contact shielding work?"</button>
+            </div>
+          </div>
+
+          <div class="ai-chat-box" id="aiChatBox">
+            <div class="ai-msg bot">
+              <div class="bot-badge">AI</div>
+              <div class="msg-content">
+                <p>Hello! I am your EstateOS Assistant. I have real-time access to authorized builder listings, engineering milestone logs, and scheduling slots. How can I assist your real estate journey today?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ai-input-bar">
+            <input type="text" id="aiInputPrompt" placeholder="Ask anything about properties, construction velocity, or authority rules..." onkeydown="if(event.key==='Enter') sendAiMessage()">
+            <button class="btn btn-primary" onclick="sendAiMessage()">
+              Ask AI
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: PRICING (Image 1 Section 6) -->
+    <section class="section dark-section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-heading text-center reveal-on-scroll">
+          <div class="pill-badge dark-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><line x1="12" y1="6" x2="12" y2="8"></line><line x1="12" y1="16" x2="12" y2="18"></line></svg>
+            PLANS BUILT FOR REAL-ESTATE WORKFLOW
+          </div>
+          <h2 class="section-title text-light">Choose the plan that fits your real-estate workflow.</h2>
+          <p class="section-subtitle text-light-muted">
+            Simple, transparent pricing whether you're an independent broker, growing brokerage, or premier real estate developer.
+          </p>
+
+          <!-- Billing Period Toggle -->
+          <div class="pricing-toggle-wrap">
+            <span class="toggle-label" id="lblMonthly">Monthly</span>
+            <button class="toggle-switch" id="billingToggle" aria-label="Toggle Billing Interval">
+              <span class="toggle-slider"></span>
+            </button>
+            <span class="toggle-label" id="lblAnnual">Annual <span class="badge-discount">Save 20%</span></span>
+          </div>
+        </div>
+
+        <!-- 3 Pricing Cards (From Image 1) -->
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card reveal-on-scroll" data-delay="100">
+            <div class="pricing-card-header">
+              <div class="pricing-name-row">
+                <h3 class="tier-name">Starter</h3>
+                <span class="tier-badge">Brokers</span>
+              </div>
+              <p class="tier-desc">Essential tools for individual brokers and boutique advisors to manage client enquiries.</p>
+              <div class="price-display">
+                <span class="currency">₹</span>
+                <span class="amount" id="priceStarter">100</span>
+                <span class="period">/user /month</span>
+              </div>
+            </div>
+
+            <div class="tier-divider"></div>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Up to 25 Active Property Listings</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Shielded Buyer Chat &amp; Call Relay</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Basic Lead Tracking Pipeline</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Standard Document Storage</li>
+            </ul>
+
+            <button class="btn btn-secondary btn-full" onclick="selectPricingPlan('Starter')">Get Started</button>
+          </div>
+
+          <!-- Tier 2: Business (Featured) -->
+          <div class="pricing-card featured reveal-on-scroll" data-delay="200">
+            <div class="featured-ribbon">MOST POPULAR</div>
+            <div class="pricing-card-header">
+              <div class="pricing-name-row">
+                <h3 class="tier-name">Business</h3>
+                <span class="tier-badge">Brokerages</span>
+              </div>
+              <p class="tier-desc">Advanced ecosystem management for brokerages and mid-scale developer teams.</p>
+              <div class="price-display">
+                <span class="currency">₹</span>
+                <span class="amount" id="priceBusiness">500</span>
+                <span class="period">/user /month</span>
+              </div>
+            </div>
+
+            <div class="tier-divider"></div>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> <b>Unlimited</b> Active Property Listings</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Full Role-Based Authority Matrix</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> 3D Virtual Walkthrough Player</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Automated Lead Distribution Engine</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> AI Property Assistant Integration</li>
+            </ul>
+
+            <button class="btn btn-primary btn-full" onclick="selectPricingPlan('Business')">Start 14-Day Free Trial</button>
+          </div>
+
+          <!-- Tier 3: Developer / Enterprise -->
+          <div class="pricing-card reveal-on-scroll" data-delay="300">
+            <div class="pricing-card-header">
+              <div class="pricing-name-row">
+                <h3 class="tier-name">Developer</h3>
+                <span class="tier-badge">Enterprise</span>
+              </div>
+              <p class="tier-desc">End-to-end command center for builders with multi-site engineering &amp; multi-tier broker networks.</p>
+              <div class="price-display">
+                <span class="amount custom">Let's Talk</span>
+                <span class="period">Customized deployment</span>
+              </div>
+            </div>
+
+            <div class="tier-divider"></div>
+
+            <ul class="pricing-features">
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Custom ERP &amp; Tally Accounting Sync</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Multi-Project Construction Velocity Logs</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Contractor &amp; Material Approval Workflows</li>
+              <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Dedicated Solutions Architect &amp; SLA</li>
+            </ul>
+
+            <button class="btn btn-secondary btn-full" onclick="selectPricingPlan('Developer')">Talk to Sales</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 8: WHITEPAPER DEEP DIVE (Based on provided PDF Whitepaper) -->
+    <section class="section whitepaper-section" id="whitepaper">
+      <div class="container">
+        <div class="whitepaper-box reveal-on-scroll">
+          <div class="whitepaper-content-col">
+            <div class="pill-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              OFFICIAL WHITEPAPER V1.1
+            </div>
+            <h2 class="section-title">Solving real estate fragmentation with connected architecture.</h2>
+            <p class="whitepaper-lead">
+              The real estate industry involves builders, developers, engineers, contractors, brokers, and buyers—yet the systems connecting them depend on disconnected WhatsApp chats, spreadsheets, and manual phone calls.
+            </p>
+
+            <div class="whitepaper-pillars">
+              <div class="pillar-item">
+                <div class="pillar-num">1</div>
+                <div>
+                  <h4>Centralized Command Center</h4>
+                  <p>Real-time visibility from project site progress and materials to broker listings and sales conversion.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-num">2</div>
+                <div>
+                  <h4>Privacy-First Customer Experience</h4>
+                  <p>Integrated chat and masked calling shield personal contact information from unwanted marketing exposure.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-num">3</div>
+                <div>
+                  <h4>Role-Based Authority Matrix</h4>
+                  <p>Defined permissions ensure engineers log progress, brokers access leads, and developers retain master approval.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="whitepaper-cta-row">
+              <button class="btn btn-primary" onclick="openWhitepaperModal()">
+                Read Whitepaper Summary
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <button class="btn btn-ghost" onclick="downloadWhitepaperDoc()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                Download Whitepaper (PDF)
+              </button>
+            </div>
+          </div>
+
+          <div class="whitepaper-visual-col">
+            <div class="paper-cover-card card-tilt">
+              <div class="paper-badge-v">VERSION 1.1</div>
+              <div class="paper-logo">Estate<span>OS</span></div>
+              <h3 class="paper-title">One Connected Ecosystem for Real Estate</h3>
+              <p class="paper-desc">Architectural blueprint for unifying builders, developers, brokerage owners, brokers, and buyers into a single source of truth.</p>
+              <div class="paper-meta">
+                <span>Published Oct 2026</span>
+                <span>•</span>
+                <span>Confidential Whitepaper</span>
+              </div>
+              <div class="paper-stamp">VERIFIED ARCHITECTURE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9: CALL TO ACTION (Image 1 Bottom Section) -->
+    <section class="section dark-section cta-section" id="cta">
+      <!-- Watermark Giant Typography from Image 1 -->
+      <div class="watermark-estateos">ESTATEOS</div>
+
+      <div class="container cta-container">
+        <!-- Floating CTA Card from Image 1 -->
+        <div class="floating-cta-card card-tilt reveal-on-scroll">
+          <div class="floating-cta-pill">
+            <span class="sparkle">✦</span>
+            ESTATEOS WORKFLOW
+          </div>
+          <h3 class="floating-cta-title">Ready to connect your real-estate workflow?</h3>
+          <p class="floating-cta-text">
+            Join thousands of developers, brokerage owners, brokers, and homebuyers who operate on a single transparent ecosystem.
+          </p>
+          <button class="btn btn-primary btn-lg" id="bottomCtaBtn">
+            Book a Strategy Call
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+          <span class="cta-micro-note">No credit card required • Dedicated onboarding specialist</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (Matching Image 1 Footer) -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand-col">
+        <a href="#" class="brand-logo footer-logo">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <span class="brand-name">Estate<span>OS</span></span>
+        </a>
+        <p class="footer-tagline">
+          The unified digital operating system for real estate development, brokerage operations, and customer privacy.
+        </p>
+        <div class="footer-status-pill">
+          <span class="live-dot"></span>
+          <span>All Systems Operational</span>
+        </div>
+      </div>
+
+      <div class="footer-links-grid">
+        <div class="footer-col">
+          <span class="col-title">Product</span>
+          <a href="#roles">Command Center</a>
+          <a href="#workflow">Lead Pipeline</a>
+          <a href="#authority">Authority Matrix</a>
+          <a href="#mobile-app">Mobile Application</a>
+          <a href="#ai-assistant">AI Concierge</a>
+        </div>
+
+        <div class="footer-col">
+          <span class="col-title">Ecosystem</span>
+          <a href="#roles">Builders &amp; Developers</a>
+          <a href="#roles">Real Estate Brokers</a>
+          <a href="#roles">Contractors &amp; Engineers</a>
+          <a href="#roles">Home Buyers &amp; Investors</a>
+          <a href="#pricing">Enterprise Tier</a>
+        </div>
+
+        <div class="footer-col">
+          <span class="col-title">Resources</span>
+          <a href="#whitepaper">Whitepaper v1.1</a>
+          <a href="#" onclick="openDemoModal(); return false;">Interactive Demo</a>
+          <a href="#" onclick="openRoleModal('developer'); return false;">API Documentation</a>
+          <a href="#" onclick="openRoleModal('broker'); return false;">Security &amp; Encryption</a>
+          <a href="#" onclick="openRoleModal('buyer'); return false;">Privacy Whitepaper</a>
+        </div>
+
+        <div class="footer-col">
+          <span class="col-title">Company</span>
+          <a href="#hero">About EstateOS</a>
+          <a href="#pricing">Pricing Plans</a>
+          <a href="#cta">Contact Sales</a>
+          <a href="#cta">Partnership Network</a>
+          <a href="#">Terms &amp; Governance</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-inner">
+        <span>&copy; 2026 EstateOS Inc. All rights reserved. Confidential &amp; Proprietary.</span>
+        <div class="footer-legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Security Safeguards</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING INTERACTIVE WIDGETS -->
+  <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- MODAL: BOOK A DEMO -->
+  <div class="modal-backdrop" id="demoModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeDemoModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-pill">ESTATEOS WALKTHROUGH</span>
+        <h3>Experience EstateOS Live</h3>
+        <p>Schedule a customized 20-minute demonstration tailored to your exact ecosystem role.</p>
+      </div>
+      <form class="modal-form" id="demoForm" onsubmit="handleDemoSubmit(event)">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="e.g. Kartik Sharma" required>
+        </div>
+        <div class="form-group">
+          <label>Work Email</label>
+          <input type="email" placeholder="e.g. kartik@realtygroup.com" required>
+        </div>
+        <div class="form-group">
+          <label>Your Role in the Ecosystem</label>
+          <select required>
+            <option value="">Select your role...</option>
+            <option value="builder">Builder / Real Estate Developer</option>
+            <option value="brokerage">Brokerage Owner / Managing Director</option>
+            <option value="broker">Independent Real Estate Broker</option>
+            <option value="contractor">Site Engineer / Contractor</option>
+            <option value="buyer">Home Buyer / Investor</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Preferred Timeframe</label>
+          <select>
+            <option value="today">Today (Urgent)</option>
+            <option value="this-week" selected>This Week</option>
+            <option value="next-week">Next Week</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full btn-lg">
+          Confirm Strategy Session &rarr;
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL: ROLE DETAILS DEEP DIVE -->
+  <div class="modal-backdrop" id="roleModal">
+    <div class="modal-dialog modal-large">
+      <button class="modal-close-btn" id="closeRoleModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-pill" id="roleModalPill">ROLE MODULE</span>
+        <h3 id="roleModalTitle">Role Details</h3>
+        <p id="roleModalSubtitle">Comprehensive breakdown of features, permissions, and safeguards.</p>
+      </div>
+      <div class="modal-body-content" id="roleModalBody">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: WHITEPAPER SUMMARY MODAL -->
+  <div class="modal-backdrop" id="whitepaperModal">
+    <div class="modal-dialog modal-large">
+      <button class="modal-close-btn" id="closeWhitepaperModal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-pill">WHITEPAPER V1.1</span>
+        <h3>EstateOS Architecture Whitepaper</h3>
+        <p>Full breakdown of industry fragmentation, structural gaps, and our connected solution.</p>
+      </div>
+      <div class="modal-body-content whitepaper-modal-text">
+        <h4>1. The Core Real Estate Problem</h4>
+        <p>The real estate industry is built around collaboration between builders, developers, brokers, employees, contractors, engineers, designers, and customers. Yet, much of this collaboration still depends on disconnected tools, phone calls, messaging applications, spreadsheets, and manual processes. This creates challenges in maintaining transparency, managing responsibilities, tracking project progress, monitoring sales, and ensuring that the right people have the right authority at the right time.</p>
+        
+        <h4>2. The Solution: A Unified Digital Platform</h4>
+        <p>Our solution is a unified digital platform designed to connect the different stakeholders involved in real estate within one ecosystem. Instead of relying on multiple disconnected applications for communication, project management, property listings, sales, and customer interaction, the platform brings these activities together in one place.</p>
+        
+        <h4>3. Role-Based Authority Matrix</h4>
+        <p>A role-based authority system allows builders to decide exactly what each person can view, edit, approve, or manage, giving them greater control while allowing their teams to work independently within defined responsibilities.</p>
+
+        <h4>4. Shielded Customer Experience</h4>
+        <p>Instead of having to communicate through multiple external applications, customers can interact with authorized brokers through the platform using integrated chat and calling capabilities. This reduces unnecessary exposure of personal contact information and eliminates repetitive spam calls.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
